@@ -1,0 +1,54 @@
+GERAÇÃO DO ARQUIVO DESIF
+========================
+Iniciando processamento em 2019-01-01 11:12
+
+Arquivo: `desif_rio_072019.csv`
+
+DIFERENÇA POR PREFIXO
+---------------------
+
+[format="psv", options="header"]
+|===
+cd_prf_depe|vl_evt|record_count
+1|2|21315
+3|4|2122
+|===
+
+INCOSSISTENCIAS CORRIGIDAS
+--------------------------
+
+[format="psv", options="header"]
+|===
+cd_prf_depe|dt_bal|cd_rbc|vl_evt|tipo
+1|2019-01-15|7092831|2|diff_data
+3|2019-01-23|7092831|4|diff_rubrica
+|===
+
+COMPARACAO COM PLANILHA CENOP
+-----------------------------
+
+Estes registros presentes estão divergentes entre a planilha Cenop e a base gerada. +
+Os valores da soma dos débitos das rubricas do `Cosif 7` da planilha devem ser os mesmos valores da base.
+
+Algumas divergências possíveis são:
+
+- O lançamento existe nas duas fontes mas não o valor não é igual. Possível erro no calculo.
+- O lançamento existe somente na planilha Cenop. Neste caso verificar se o lançamento não é correspondente a apuração do resultado, já que este tipo de lançamento não está na base gerada. 
+- O lançamento existe somente na base gerada. Verificar a base de lançamentos do CNT e o RETAG para verificar se o lançamento realmente existe, alguns lançamentos de débitos de estorno não estão presentes na base do Cenop.
+
+
+LANÇAMENTOS DIVERGENTES ENTRE PLANILHA CENOP E BASE GERADA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[format="psv", options="header"]
+|===
+cd_prf_depe|dt_bal|cd_rbc|vl_evt|tipo
+1|2019-01-15|7092831|2|diff_data
+3|2019-01-23|7092831|4|diff_rubrica
+|===
+
+
+FINALIZAÇÃO
+-----------
+
+Processamento finalizado em 2019-01-01 11:12
